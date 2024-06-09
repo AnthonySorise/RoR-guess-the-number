@@ -1,8 +1,8 @@
 <h1>Guess the Number</h1>
-<p><%= session[:message] %></p>
+<p class="message"><%= session[:message] %></p>
 
 <%= form_with url: guess_path, local: true, data: { turbo: false } do |form| %>
-  <%= form.label :guess, "Enter your guess:" %>
+  <%= form.label :guess, "Enter your guess, 1-100: " %>
   <%= form.number_field :guess %>
   <%= form.submit "Submit" %>
 <% end %>

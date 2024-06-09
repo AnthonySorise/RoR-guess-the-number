@@ -13,3 +13,46 @@
  *= require_tree .
  *= require_self
  */
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: black;
+  color: silver;
+  text-align: center;
+}
+
+h1 {
+  color: #007bff;
+  font-size: 3em;
+}
+
+.message {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+form {
+  margin-top: 20px;
+}
+
+label {
+    font-size: 1.5em;
+}
+
+input[type="number"] {
+  padding: 5px;
+  font-size: 1.5em;
+  background-color: silver;
+}
+
+input[type="submit"] {
+  padding: 5px 10px;
+  background-color: silver;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
