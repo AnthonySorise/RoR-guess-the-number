@@ -7,5 +7,8 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
   # Defines the root path route ("/")
-  # root "posts#index"
+  root "game#index"
+
+  # Add the route for the guess action
+  post 'guess', to: 'game#guess'
 end
