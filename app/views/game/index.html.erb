@@ -3,6 +3,14 @@
 
 <%= form_with url: guess_path, local: true, data: { turbo: false } do |form| %>
   <%= form.label :guess, "Enter your guess, 1-100: " %>
-  <%= form.number_field :guess %>
+  <%= form.number_field :guess, id: 'guess-input', min: 1, max: 100, step: 1 %>
   <%= form.submit "Submit" %>
 <% end %>
+
+<script>
+  document.getElementById('guess-input').addEventListener('input', function (e) {
+    const value = parseInt(e.target.value, 10);
+    if (value < 1) e.target.value = 1;
+    if (value > 100) e.target.value = 100;
+  });
+</script>
