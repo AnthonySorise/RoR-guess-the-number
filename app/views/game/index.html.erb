@@ -1,2 +1,8 @@
-<h1>Game#index</h1>
-<p>Find me in app/views/game/index.html.erb</p>
+<h1>Guess the Number</h1>
+<p><%= session[:message] %></p>
+
+<%= form_with url: guess_path, local: true, data: { turbo: false } do |form| %>
+  <%= form.label :guess, "Enter your guess:" %>
+  <%= form.number_field :guess %>
+  <%= form.submit "Submit" %>
+<% end %>
